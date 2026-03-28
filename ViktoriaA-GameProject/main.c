@@ -354,23 +354,11 @@ int main(void)
       {
          if (AlienAlive[i])
          {
-            Texture2D Alien;
-            if (AlienType[i] == 1)
-            {
-               Alien = Alien1;
-            }
-            else if(AlienType[i] == 2)
-            {
-               Alien = Alien2;
-            }
-            else
-            {
-               Alien = Alien3;
-            }
+            Texture2D Alien = GetAlienType(Alien[i], Alien1, Alien2, Alien3);
             DrawTexture(Alien, AlienX[i], AlienY[i], WHITE);
-         }
-      }
-
+         {
+      {
+            
       // Game Over
       if (GameOver)
       {
@@ -417,8 +405,7 @@ int main(void)
    return 0;
 }
 
-//clang  main.c -o game -I/opt/homebrew/opt/raylib/include -L/opt/homebrew/opt/raylib/lib -lraylib -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo
-// cd Desktop/ViktoriaA-GameProject
+
 
 
 
