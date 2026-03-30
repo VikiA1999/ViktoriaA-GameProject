@@ -240,7 +240,7 @@ int main(void)
          case 0: AlienX[i] = rand() % screenWidth; AlienY[i] = -50; break;
          case 1: AlienX[i] = rand() % screenWidth; AlienY[i] = screenHeight + 50; break;
          case 2: AlienX[i] = screenWidth + 50; AlienY[i] = rand() % screenHeight; break;
- case 3: AlienX[i] = -50; AlienY[i] = rand() % screenHeight; break;
+         case 3: AlienX[i] = -50; AlienY[i] = rand() % screenHeight; break;
       }
                AlienType[i] = rand() % 3 + 1;
       float dx = ShipX - AlienX[i];
@@ -292,7 +292,7 @@ int main(void)
          for (int b = 0; b < MAX_BLAST; b++)
          {
             if(!BlastActive[b])
-   continue;
+            continue;
             Rectangle BlastRectangle = GetBlastRectangle(BlastX[b], BlastY[b], Blast);
                
             if(CheckCollisionRecs(BlastRectangle, AlienRectangle))
